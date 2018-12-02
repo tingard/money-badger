@@ -1,0 +1,29 @@
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+// Font Variables
+$patua-one: 'Patua One', sans-serif;
+
+@mixin theme-font() {
+  font-family: $patua-one;
+  letter-spacing: 5px;
+}
+
+$c-gray-light: #edf3f6;
+$c-primary: #1abc9c;
+$c-secondary: #9b59b6;
+$c-light: #34495e;
+$c-text: #fff;
+$bdc-base: #465f78;
+$bgc-body: #2c3e50;
+$c-button-outlined: #fff;
+
+@import 'sierra-library/lib/index.scss';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+
+.floating-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
