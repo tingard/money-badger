@@ -13,10 +13,11 @@ export default {
           email: 'samuel.patrick@port.ac.uk',
         }
       ],
-      transactions: [
+      costs: [
         {
           by: 'Tim',
           value: 40,
+          tags: ['groceries', 'takeaway'],
           sharedWith: [
             {
               name: 'Max',
@@ -50,10 +51,11 @@ export default {
           email: 'samuel.patrick@port.ac.uk',
         }
       ],
-      transactions: [
+      costs: [
         {
           by: 'Lizi',
           value: 32,
+          tags: ['Christmas Meal'],
           sharedWith: [
             {
               name: 'Lizi',

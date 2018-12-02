@@ -10,20 +10,44 @@ $patua-one: 'Patua One', sans-serif;
 }
 
 $c-gray-light: #edf3f6;
-$c-primary: #1abc9c;
-$c-secondary: #9b59b6;
-$c-light: #34495e;
+$c-primary: #337;
+$c-secondary: #ca4;
+$c-light: #aaa;
 $c-text: #fff;
-$bdc-base: #465f78;
-$bgc-body: #2c3e50;
+$bdc-base: #113;
+$bgc-body: #213;
 $c-button-outlined: #fff;
 
 @import 'sierra-library/lib/index.scss';
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 
-.floating-button {
+.floating-button-position {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  top: 0;
+  left: 0;
+  padding-right: 8px;
+  pointer-events: none;
+}
+.floating-button {
+  padding-top: 13px;
+  box-shadow: 0px 2px 6px 0 #001;
+  margin-right: 8px;
+}
+
+
+.slick-dots {
+  li, li.slick-active {
+    button::before {
+      color: white;
+    }
+  }
+  li.slick-active button::before {
+    opacity: 1;
+  }
 }

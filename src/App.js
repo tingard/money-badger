@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Slider from 'react-slick';
+import * as eva from 'eva-icons';
+import Floater from 'react-floater';
 import Group from './Group';
 import './App.scss';
 import store from './store';
@@ -12,15 +14,21 @@ class App extends Component {
       name: 'React'
     };
   }
-
+  componentDidMount() {
+    eva.replace()
+  }
+  componentDidUpdate() {
+    eva.replace()
+  }
   render() {
     const store = this.props.store
     var settings = {
       dots: true,
       infinite: true,
       speed: 300,
+      arrows: false,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
     return (
       <div>
@@ -33,11 +41,20 @@ class App extends Component {
             Your Groups
           </h2>
         </div>
-        <Slider {...settings}>
-          {store.groups.map((group, i) => <Group group={group} key={`group-${i}`} />)}
-        </Slider>
-
-        <button className="floating-button button button-red button-huge">Add cost</button>
+        <div className="mb-huge">
+          <Slider {...settings}>
+            {store.groups.map((group, i) => <Group group={group} key={`group-${i}`} />)}
+          </Slider>
+        </div>
+        <div className="floating-button-position">
+          <Floater content="Add a cost or group" event="hover">
+            <div className="floating-button-spacer">
+              <button className="button button--red floating-button">
+                <i data-eva="plus" data-eva-fill="white" />
+              </button>
+            </div>
+          </Floater>
+        </div>
       </div>
     );
   }
